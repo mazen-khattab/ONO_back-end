@@ -14,7 +14,10 @@ namespace ONO.Infrasturcture.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<Role> builder)
         {
-            throw new NotImplementedException();
+            builder.HasMany(r => r.UserRoles)
+            .WithOne(ur => ur.Role)
+            .HasForeignKey(ur => ur.RoleId)
+            .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

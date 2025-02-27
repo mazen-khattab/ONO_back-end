@@ -10,8 +10,8 @@ namespace ONO.Core.Entities
     {
         public int Rating { get; set; }
         public DateTimeOffset CreatedAt { get; set; }
-        public string Comment { get; set; } = null!;
-        public long UserId { get; set; }
+        public string? Comment { get; set; }
+        public int UserId { get; set; }
         public int ProductId { get; set; }
 
         public User User { get; set; } = null!;

@@ -14,7 +14,20 @@ namespace ONO.Infrasturcture.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<Order> builder)
         {
-            throw new NotImplementedException();
+            builder.HasOne(o => o.Address)
+            .WithMany()
+            .HasForeignKey(o => o.AddressId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasMany(o => o.OrderDetails)
+                .WithOne(od => od.Order)
+                .HasForeignKey(od => od.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(o => o.InventoryTransactions)
+                .WithOne(it => it.Order)
+                .HasForeignKey(it => it.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -16,12 +16,12 @@ namespace ONO.Core.Entities
         public DateTimeOffset UpdatedAt { get; set; }
         public int StockUnit { get; set; }
         public bool IsActive { get; set; }
-        public int CatId { get; set; }
+        public int CategoryId { get; set; }
 
         public Category Category { get; set; } = null!;
-        public ICollection<ProductImage> ProductImages { get; set; } = null!;
-        public ICollection<Review> Reviews { get; set; } = null!;
-        public ICollection<OrderDetails> OrderDetails { get; set; } = null!;
-        public ICollection<InventoryTransaction> InventoryTransactions { get; set; } = null!;
+        public ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
+        public ICollection<Review> Reviews { get; set; } = new List<Review>();
+        public ICollection<OrderDetails> OrderDetails { get; set; } = new List<OrderDetails>();
+        public ICollection<InventoryTransaction> InventoryTransactions { get; set; } = new List<InventoryTransaction>();
     }
 }

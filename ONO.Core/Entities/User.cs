@@ -11,10 +11,10 @@ namespace ONO.Core.Entities
         public string Fname { get; set; }
         public string Lname { get; set; }
         public string Username { get; set; }
-        public string Pass { get; set; }
+        public string Password { get; set; }
         public string Email { get; set; }
         public bool EmailConfirmed { get; set; }
-        public string Phone { get; set; } = null!;
+        public string? Phone { get; set; }
         public bool PhoneConfirmed { get; set; }
         public bool TwoFactor { get; set; }
         public bool Lockout { get; set; }
@@ -24,10 +24,10 @@ namespace ONO.Core.Entities
         public bool NormailzedUsername { get; set; }
         public string Access { get; set; } = null!;
 
-        public ICollection<UserAddress> Addresses { get; set; } = null!;
-        public ICollection<UserRole> UserRoles { get; set; } = null!;
-        public ICollection<Review> Reviews { get; set; } = null!;
-        public ICollection<Order> Orders { get; set; } = null!;
-        public ICollection<InventoryTransaction> InventoryTransactions { get; set; } = null!;
+        public ICollection<UserAddress> Addresses { get; set; } = new List<UserAddress>();
+        public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+        public ICollection<Review> Reviews { get; set; } = new List<Review>();
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
+        public ICollection<InventoryTransaction> InventoryTransactions { get; set; } = new List<InventoryTransaction>();
     }
 }

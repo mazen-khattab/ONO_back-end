@@ -14,7 +14,11 @@ namespace ONO.Infrasturcture.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<Review> builder)
         {
-            throw new NotImplementedException();
+            builder.Property(r => r.Rating)
+            .IsRequired(false);
+
+            builder.Property(r => r.Comment)
+                .HasColumnType("nvarchar(MAX)");
         }
     }
 }

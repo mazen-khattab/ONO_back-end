@@ -8,10 +8,10 @@ namespace ONO.Core.Entities
 {
     public class ProductImage : BaseEntity
     {
-        public string AltText { get; set; }
-        public string ImageUrl { get; set; }
+        public string AltText { get; set; } = null!;
+        public string ImageUrl { get; set; } = null!;
         public int ProductId { get; set; }
 
-        public Product Product { get; set; }
+        public Product Product { get; set; } = null!;
     }
 }

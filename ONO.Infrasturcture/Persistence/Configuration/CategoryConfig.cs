@@ -14,7 +14,16 @@ namespace ONO.Infrasturcture.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            throw new NotImplementedException();
+            builder.Property(c => c.Name)
+           .HasMaxLength(20)
+           .IsRequired();
+
+            builder.Property(c => c.Description).HasColumnType("nvarchar(MAX)");
+
+            builder.HasMany(c => c.Products)
+                .WithOne(p => p.Category)
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }
