@@ -6,6 +6,7 @@ using System.Text;
 using System;
 using ONO.Infrasturcture.Persistence;
 using ONO.Infrasturcture.Extensions;
+using ONO.Core.Entities;
 
 namespace ONO.API
 {
@@ -31,7 +32,7 @@ namespace ONO.API
             #endregion
 
             #region Authentication
-            builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+            builder.Services.AddIdentity<User, Role>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 

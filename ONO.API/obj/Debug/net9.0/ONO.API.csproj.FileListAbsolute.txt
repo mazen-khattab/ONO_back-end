@@ -563,3 +563,4 @@ C:\Users\HOMEi\Downloads\ONO\ONO\ONO.API\obj\Debug\net9.0\refint\ONO.API.dll
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.API\obj\Debug\net9.0\ONO.API.pdb
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.API\obj\Debug\net9.0\ONO.API.genruntimeconfig.cache
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.API\obj\Debug\net9.0\ref\ONO.API.dll
+D:\Mazen\Projects\ONO\ONO.API\obj\Debug\net9.0\ONO.API.sourcelink.json

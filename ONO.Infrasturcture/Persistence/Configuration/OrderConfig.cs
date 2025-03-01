@@ -17,17 +17,17 @@ namespace ONO.Infrasturcture.Persistence.Configuration
             builder.HasOne(o => o.Address)
             .WithMany()
             .HasForeignKey(o => o.AddressId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.SetNull);
 
             builder.HasMany(o => o.OrderDetails)
                 .WithOne(od => od.Order)
                 .HasForeignKey(od => od.OrderId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(o => o.InventoryTransactions)
                 .WithOne(it => it.Order)
                 .HasForeignKey(it => it.OrderId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

@@ -20,3 +20,4 @@ C:\Users\HOMEi\Downloads\ONO\ONO\ONO.Application\obj\Debug\net9.0\ONO.Applicatio
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.Application\obj\Debug\net9.0\refint\ONO.Application.dll
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.Application\obj\Debug\net9.0\ONO.Application.pdb
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.Application\obj\Debug\net9.0\ref\ONO.Application.dll
+D:\Mazen\Projects\ONO\ONO.Application\obj\Debug\net9.0\ONO.Application.sourcelink.json

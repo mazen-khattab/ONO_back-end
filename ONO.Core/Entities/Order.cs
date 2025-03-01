@@ -11,7 +11,7 @@ namespace ONO.Core.Entities
         public string Status { get; set; }
         public DateTimeOffset OrderDate { get; set; }
         public decimal TotalPrice { get; set; }
-        public int AddressId { get; set; }
+        public int? AddressId { get; set; }
         public int UserId { get; set; }
 
         public UserAddress Address { get; set; } = null!;

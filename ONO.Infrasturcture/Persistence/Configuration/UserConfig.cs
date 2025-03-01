@@ -14,30 +14,33 @@ namespace ONO.Infrasturcture.Persistence.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasMany(u => u.UserRoles)
-           .WithOne(ur => ur.User)
-           .HasForeignKey(ur => ur.UserId)
-           .OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(u => u.UserRoles)  // Define the relationship
+               .WithOne(ur => ur.User)
+               .HasForeignKey(ur => ur.UserId)
+               .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(u => u.Reviews)
                 .WithOne(r => r.User)
                 .HasForeignKey(r => r.UserId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(u => u.Orders)
                 .WithOne(o => o.User)
                 .HasForeignKey(o => o.UserId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(u => u.InventoryTransactions)
                 .WithOne(it => it.User)
                 .HasForeignKey(it => it.UserId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(u => u.Addresses)
                 .WithOne(a => a.User)
                 .HasForeignKey(a => a.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            builder.HasQueryFilter(u => !u.IsDeleted);
         }
     }
 }

@@ -1080,6 +1080,9 @@
         }
       },
       "ONO.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "9.0.2"
+        },
         "runtime": {
           "ONO.Core.dll": {
             "assemblyVersion": "1.0.0",

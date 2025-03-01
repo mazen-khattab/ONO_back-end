@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using ONO.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace ONO.Core.Entities
 {
-    public class User : IdentityUser<int>
+    public class User : IdentityUser<int>, ISoftDeleteble
     {
         public string Fname { get; set; }
         public string? Lname { get; set; }
         public bool NoEmail { get; set; }
         public bool NormailzedUsername { get; set; }
-        public string Access { get; set; } = null!; 
+        public string Access { get; set; } = null!;
+        public bool IsDeleted { get; set; }
 
         public ICollection<UserAddress> Addresses { get; set; } = new List<UserAddress>();
         public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();

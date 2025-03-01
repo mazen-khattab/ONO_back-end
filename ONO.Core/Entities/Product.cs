@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ONO.Core.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ONO.Core.Entities
 {
-    public class Product : BaseEntity
+    public class Product : BaseEntity, ISoftDeleteble
     {
         public string Name { get; set; }
         public string Description { get; set; } 
@@ -15,8 +16,8 @@ namespace ONO.Core.Entities
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
         public int StockUnit { get; set; }
-        public bool IsActive { get; set; }
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
+        public bool IsDeleted { get; set; }
 
         public Category Category { get; set; } = null!;
         public ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();

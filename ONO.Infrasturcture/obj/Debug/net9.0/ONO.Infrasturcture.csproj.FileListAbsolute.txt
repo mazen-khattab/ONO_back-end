@@ -32,3 +32,4 @@ C:\Users\HOMEi\Downloads\ONO\ONO\ONO.Infrasturcture\obj\Debug\net9.0\refint\ONO.
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.Infrasturcture\obj\Debug\net9.0\ONO.Infrasturcture.pdb
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.Infrasturcture\obj\Debug\net9.0\ONO.Infrasturcture.genruntimeconfig.cache
 C:\Users\HOMEi\Downloads\ONO\ONO\ONO.Infrasturcture\obj\Debug\net9.0\ref\ONO.Infrasturcture.dll
+D:\Mazen\Projects\ONO\ONO.Infrasturcture\obj\Debug\net9.0\ONO.Infrasturcture.sourcelink.json

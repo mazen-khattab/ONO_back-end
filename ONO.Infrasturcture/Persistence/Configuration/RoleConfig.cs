@@ -15,9 +15,11 @@ namespace ONO.Infrasturcture.Persistence.Configuration
         public void Configure(EntityTypeBuilder<Role> builder)
         {
             builder.HasMany(r => r.UserRoles)
-            .WithOne(ur => ur.Role)
-            .HasForeignKey(ur => ur.RoleId)
-            .OnDelete(DeleteBehavior.Restrict);
+                .WithOne(ur => ur.Role)
+                .HasForeignKey(ur => ur.RoleId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasQueryFilter(u => !u.IsDeleted);
         }
     }
 }
