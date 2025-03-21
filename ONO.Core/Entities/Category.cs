@@ -11,6 +11,6 @@ namespace ONO.Core.Entities
         public string Name { get; set; }
         public string? Description { get; set; }
 
-        public ICollection<Product> Products { get; set; } = new List<Product>();
+        public ICollection<ProductCategories> ProductCategories { get; set; } = new List<ProductCategories>();
     }
 }

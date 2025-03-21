@@ -16,10 +16,9 @@ namespace ONO.Core.Entities
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset UpdatedAt { get; set; }
         public int StockUnit { get; set; }
-        public int? CategoryId { get; set; }
         public bool IsDeleted { get; set; }
 
-        public Category Category { get; set; } = null!;
+        public ICollection<ProductCategories> ProductCategories { get; set; } = new List<ProductCategories>();
         public ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
         public ICollection<OrderDetails> OrderDetails { get; set; } = new List<OrderDetails>();

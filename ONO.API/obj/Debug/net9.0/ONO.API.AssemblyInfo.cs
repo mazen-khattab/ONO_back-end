@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ONO.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81a686d60a75da4e7298ff213194ff3ae43cdd0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c04ad0ead217bafc97f324df03b4250a72ab7926")]
 [assembly: System.Reflection.AssemblyProductAttribute("ONO.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ONO.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -20,10 +20,10 @@ namespace ONO.Infrasturcture.Persistence.Configuration
 
             builder.Property(c => c.Description).HasColumnType("nvarchar(MAX)");
 
-            builder.HasMany(c => c.Products)
+            builder.HasMany(c => c.ProductCategories)
                 .WithOne(p => p.Category)
                 .HasForeignKey(p => p.CategoryId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

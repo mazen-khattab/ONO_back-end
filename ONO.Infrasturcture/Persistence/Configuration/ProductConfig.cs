@@ -40,6 +40,11 @@ namespace ONO.Infrasturcture.Persistence.Configuration
                 .HasForeignKey(it => it.ProductId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            builder.HasMany(c => c.ProductCategories)
+                .WithOne(p => p.Product)
+                .HasForeignKey(p => p.ProductId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             builder.HasQueryFilter(u => !u.IsDeleted);
         }
     }
